@@ -6,7 +6,11 @@ class Singleton private constructor(var value: String) {
         private var instance: Singleton? = null
         fun getInstance(value: String): Singleton? {
             if (instance == null) {
-                instance = Singleton(value)
+                synchronized(Singleton::class){
+                    if (instance == null){
+                        instance = Singleton(value)
+                    }
+                }
             }
             return instance
         }

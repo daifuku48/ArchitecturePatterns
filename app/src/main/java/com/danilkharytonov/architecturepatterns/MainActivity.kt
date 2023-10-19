@@ -21,5 +21,9 @@ class MainActivity : AppCompatActivity() {
             .setText("text")
             .setTextColor(Color.rgb(0,0,0))
             .build()
+
+        val s1 = Singleton.getInstance("VALUE")
+        val s2 = Singleton.getInstance("V")
+        Log.d("singleton", s2?.value!!)
     }
 }
