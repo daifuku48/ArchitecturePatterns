@@ -1,7 +1,5 @@
 package com.danilkharytonov.architecturepatterns.builder
 
-import android.graphics.Color
-
 interface Builder<T> {
     fun setText(text: String): Builder<T>
     fun setSize(width: Int, height: Int): Builder<T>

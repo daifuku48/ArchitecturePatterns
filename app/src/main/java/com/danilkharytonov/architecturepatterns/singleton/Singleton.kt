@@ -9,7 +9,7 @@ class Singleton<T> private constructor(private val value: T) {
         }
     }
 
-    fun getValue() : T{
+    fun getValue(): T {
         return value
     }
 }

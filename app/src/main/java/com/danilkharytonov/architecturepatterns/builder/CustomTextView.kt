@@ -13,9 +13,9 @@ class CustomTextView private constructor(
 
         private var text: String = ""
         private var size = Size(0, 0)
-        private var textColor = Color.rgb(0,0,0)
+        private var textColor = Color.rgb(0, 0, 0)
         private var textSize = 10
-        private var backgroundColor = Color.rgb(255,255,255)
+        private var backgroundColor = Color.rgb(255, 255, 255)
 
         override fun setText(text: String): Builder<CustomTextView> {
             this.text = text
