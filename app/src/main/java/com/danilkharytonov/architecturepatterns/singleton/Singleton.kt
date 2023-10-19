@@ -1,15 +1,14 @@
 package com.danilkharytonov.architecturepatterns.singleton
 
-class Singleton<T> private constructor(private val value: T) {
+class Singleton private constructor(var value: String) {
 
     companion object {
-        private var instance: Singleton<*>? = null
-        fun <T> getInstance(value: T? = null): Singleton<out T?> {
-            return instance as? Singleton<T> ?: Singleton(value as T).also { instance = it }
+        private var instance: Singleton? = null
+        fun getInstance(value: String): Singleton? {
+            if (instance == null) {
+                instance = Singleton(value)
+            }
+            return instance
         }
-    }
-
-    fun getValue(): T {
-        return value
     }
 }

@@ -3,8 +3,10 @@ package com.danilkharytonov.architecturepatterns
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.danilkharytonov.architecturepatterns.adapter.Player
 import com.danilkharytonov.architecturepatterns.builder.CustomTextView
+import com.danilkharytonov.architecturepatterns.singleton.Singleton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
